@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "398288943361",
+    "project_id": "rcroom-69442",
+    "storage_bucket": "rcroom-69442.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:398288943361:android:e08411a23fd12f7f734300",
+        "android_client_info": {
+          "package_name": "com.example.rcroom"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "398288943361-jt27bvcfng8k8j08o1hcus8vo2g511c1.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDMPx7pxggyU9MbPlltCCqZFuQ7v_BWiOQ"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "398288943361-jt27bvcfng8k8j08o1hcus8vo2g511c1.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
