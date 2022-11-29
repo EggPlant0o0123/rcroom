@@ -5,6 +5,8 @@ import 'main.dart';
 class signInUp {
   final FirebaseAuth _auth = FirebaseAuth.instance;
 
+  Stream<User?> get user => _auth.authStateChanges();
+
   Future signIn(email, password) async {
     try {
       UserCredential result = await _auth.signInWithEmailAndPassword(email: email, password: password);

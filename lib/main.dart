@@ -1,15 +1,47 @@
+import 'package:provider/provider.dart';
 import 'package:flutter/material.dart';
 import 'package:firebase_core/firebase_core.dart';
 import 'firebase_options.dart';
 import 'firebaseAuth.dart';
+import 'package:rcroom/homepage.dart';
+import 'package:firebase_auth/firebase_auth.dart';
 
 void main() async{
   WidgetsFlutterBinding.ensureInitialized();
   await Firebase.initializeApp(
     options: DefaultFirebaseOptions.currentPlatform,
   );
-  runApp(rcRoom());
+  runApp(MyApp());
 }
+
+class MyApp extends StatelessWidget {
+  const MyApp({Key? key}) : super(key: key);
+
+  @override
+  Widget build(BuildContext context) {
+    return StreamProvider<User?>.value (
+      initialData: null,
+      value: signInUp().user,
+      child: MaterialApp(home: wrapper(),)
+    );
+  }
+}
+
+class wrapper extends StatelessWidget {
+  const wrapper({Key? key}) : super(key: key);
+
+  @override
+  Widget build(BuildContext context) {
+    final userInformation = Provider.of<User?>(context);
+    if (userInformation==null){
+      return rcRoom();
+    }
+    else{
+      return homepage();
+    }
+  }
+}
+
 
 class rcRoom extends StatelessWidget {
   const rcRoom({Key? key}) : super(key: key);
