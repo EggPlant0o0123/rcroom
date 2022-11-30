@@ -86,8 +86,6 @@ class _loginSignUpState extends State<loginSignUp> {
     });
   }
 
-
-
   @override
   Widget build(BuildContext context) {
     final _auth=signInUp();
